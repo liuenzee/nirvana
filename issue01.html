@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="涅槃周刊创刊号——2009年12月，创始人罗亦龙，17人核心团队，Through the darkest dark, may we see the light.">
+<meta property="og:title" content="涅槃周刊 · 创刊号">
+<meta property="og:description" content="涅槃周刊创刊号——越万里之溟濛兮，见凤之流光。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+<title>涅槃周刊 · 创刊号</title>
+<style>
+  :root { --bg: #0a0a0a; --card: #141414; --accent: #e85d04; --text: #e0e0e0; --muted: #888; --border: #222; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+  html { scroll-behavior: smooth; }
+  a { color: var(--accent); text-decoration: none; transition: opacity .2s; }
+  a:hover { opacity: .8; }
+  nav { position: sticky; top: .5rem; z-index: 100; margin: .5rem 1rem 0; background: rgba(10,10,10,.42); -webkit-backdrop-filter: blur(40px) saturate(200%); backdrop-filter: blur(40px) saturate(200%); border: 1px solid rgba(255,255,255,.08); border-radius: 1rem; display: flex; align-items: center; justify-content: space-between; padding: .9rem 2rem; box-shadow: 0 4px 30px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.06); transition: background .3s, box-shadow .3s; }
+  nav .logo { font-weight: 700; font-size: 1.1rem; letter-spacing: .05em; }
+  nav .links a { margin-left: 1.6rem; font-size: .92rem; color: var(--muted); }
+  nav .links a:hover { color: #fff; }
+  .hamburger { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; padding: .2rem; line-height: 1; }
+  .hero { text-align: center; padding: 5rem 1.5rem 3rem; background: linear-gradient(180deg, #1a0a00 0%, var(--bg) 100%); }
+  .hero .issue-tag { display: inline-block; font-size: .82rem; color: var(--accent); border: 1px solid var(--accent); border-radius: 2rem; padding: .2rem .9rem; margin-bottom: 1.2rem; letter-spacing: .05em; }
+  .hero h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: .5rem; }
+  .hero .sub { color: var(--muted); font-size: 1rem; margin-bottom: 1.5rem; }
+  .hero .sub strong { color: var(--text); }
+  .hero .quote-box { max-width: 640px; margin: 0 auto; padding: 1.2rem 1.5rem; border-left: 3px solid var(--accent); text-align: left; background: var(--card); border-radius: 0 .5rem .5rem 0; font-style: italic; color: #ccc; font-size: .95rem; }
+  .hero .quote-box cite { display: block; font-style: normal; font-size: .8rem; color: var(--muted); margin-top: .5rem; }
+  .info { max-width: 820px; margin: 0 auto; padding: 2rem 1.5rem; }
+  .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+  .info-card { background: var(--card); border: 1px solid var(--border); border-radius: .6rem; padding: 1.2rem; transition: border-color .2s, transform .4s cubic-bezier(0.34,1.56,0.64,1), box-shadow .4s ease; }
+  .info-card:hover { border-color: rgba(232,93,4,.3); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(232,93,4,.12); }
+  .info-card h3 { font-size: .78rem; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; margin-bottom: .4rem; font-weight: 600; }
+  .info-card p { font-size: .86rem; color: var(--muted); }
+  section { max-width: 820px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+  section h2 { font-size: 1.5rem; margin-bottom: 1.2rem; }
+  section h2 .label { display: block; font-size: .75rem; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; margin-bottom: .2rem; }
+  .articles { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.2rem; }
+  .article-card { background: var(--card); border: 1px solid var(--border); border-radius: .6rem; padding: 1.3rem; transition: border-color .25s, transform .4s cubic-bezier(0.34,1.56,0.64,1), box-shadow .4s ease; position: relative; overflow: hidden; }
+  .article-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(232,93,4,.12); }
+  .sec-tag { display: inline-block; font-size: .68rem; padding: .12rem .55rem; border-radius: 2rem; margin-bottom: .5rem; font-weight: 600; letter-spacing: .04em; }
+  .tag-campus { background: rgba(16,185,129,.15); color: #34d399; }
+  .tag-people { background: rgba(59,130,246,.15); color: #60a5fa; }
+  .tag-opinion { background: rgba(245,158,11,.15); color: #fbbf24; }
+  .article-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: .3rem; }
+  .article-card p { font-size: .85rem; color: var(--muted); }
+  footer { text-align: center; padding: 3rem 1.5rem; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--border); }
+  footer a { color: var(--accent); }
+  .back-to-top { position: fixed; bottom: 2rem; right: 2rem; z-index: 99; width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #fff; border: none; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(10px); transition: opacity .3s, transform .3s, box-shadow .3s; pointer-events: none; box-shadow: 0 4px 15px rgba(232,93,4,.3); }
+  .back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(232,93,4,.5); }
+  /* Liquid glass edge refraction */
+  .liquid-glass-nav { position: sticky; overflow: visible; }
+  .liquid-glass-nav::before { content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none; z-index:1; background: radial-gradient(ellipse 120% 60% at 50% -10%, rgba(255,255,255,0.18) 0%, transparent 60%), radial-gradient(ellipse 80% 40% at 50% 110%, rgba(255,255,255,0.06) 0%, transparent 50%); mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.15) 85%, rgba(0,0,0,0.5) 100%); -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.15) 85%, rgba(0,0,0,0.5) 100%); }
+  .liquid-glass-nav::after { content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none; z-index:2; box-shadow: inset 0 1px 1px rgba(255,255,255,0.25), inset 0 -1px 1px rgba(255,255,255,0.05), inset 1px 0 1px rgba(255,255,255,0.08), inset -1px 0 1px rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-top-color: rgba(255,255,255,0.22); border-bottom-color: rgba(255,255,255,0.04); }
+  nav.liquid-glass-nav { -webkit-backdrop-filter: blur(40px) saturate(200%) contrast(1.05) brightness(1.02) !important; backdrop-filter: blur(40px) saturate(200%) contrast(1.05) brightness(1.02) !important; background: rgba(10,10,10,0.35) !important; border: none !important; box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.06) inset !important; }
+  /* Hero entrance */
+  @keyframes heroFadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+  .hero > * { opacity:0; animation: heroFadeUp .9s cubic-bezier(0.16,1,0.3,1) forwards; }
+  .hero > *:nth-child(1) { animation-delay:.1s; }
+  .hero > *:nth-child(2) { animation-delay:.2s; }
+  .hero > *:nth-child(3) { animation-delay:.3s; }
+  .hero > *:nth-child(4) { animation-delay:.4s; }
+  /* Scroll reveal */
+  .reveal { opacity:0; transform:translateY(40px); transition: opacity .8s cubic-bezier(0.16,1,0.3,1), transform .8s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+  /* Light theme */
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f8f7f4; --card: #fff; --text: #1a1a1a; --muted: #666; --border: #e0ddd8; }
+    nav { background: rgba(255,255,255,.45) !important; border-color: rgba(0,0,0,.08) !important; box-shadow: 0 4px 30px rgba(0,0,0,.06), inset 0 1px 0 rgba(255,255,255,.8) !important; }
+    .hero { background: linear-gradient(180deg, #f0ebe3 0%, var(--bg) 100%); }
+    .hero .quote-box { background: var(--card); color: #555; }
+    .liquid-glass-nav::before { background: radial-gradient(ellipse 120% 60% at 50% -10%, rgba(255,255,255,0.5) 0%, transparent 60%), radial-gradient(ellipse 80% 40% at 50% 110%, rgba(255,255,255,0.15) 0%, transparent 50%); }
+    .liquid-glass-nav::after { box-shadow: inset 0 1px 1px rgba(255,255,255,0.7), inset 0 -1px 1px rgba(0,0,0,0.03), inset 1px 0 1px rgba(255,255,255,0.3), inset -1px 0 1px rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.5); border-top-color: rgba(255,255,255,0.7); border-bottom-color: rgba(0,0,0,0.04); }
+    nav.liquid-glass-nav { background: rgba(255,255,255,0.38) !important; box-shadow: 0 8px 32px rgba(0,0,0,0.08), 0 1px 0 rgba(255,255,255,0.9) inset !important; }
+  }
+  @media (prefers-color-scheme: light) and (max-width: 600px) {
+    nav .links { background: rgba(255,255,255,.85) !important; border-color: rgba(0,0,0,.06) !important; }
+  }
+  /* Mobile */
+  @media (max-width: 600px) {
+    .hamburger { display: block; }
+    nav .links { display: none; position: absolute; top: calc(100% + .5rem); left: 0; right: 0; background: rgba(10,10,10,.85); -webkit-backdrop-filter: blur(40px) saturate(200%); backdrop-filter: blur(40px) saturate(200%); flex-direction: column; padding: 1rem 2rem; border-radius: 1rem; border: 1px solid rgba(255,255,255,.08); box-shadow: 0 8px 30px rgba(0,0,0,.3); }
+    nav .links.open { display: flex; }
+    nav .links a { margin-left: 0 !important; padding: .5rem 0; }
+    .articles { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 1.8rem; }
+    nav { margin: .3rem .5rem 0; top: .3rem; border-radius: .8rem; padding: .7rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="liquid-glass-nav">
+  <div class="logo">涅槃</div>
+  <button class="hamburger" aria-label="菜单">☰</button>
+  <div class="links">
+    <a href="index.html">纪念刊</a>
+    <a href="about.html">关于涅槃</a>
+    <a href="timeline.html">时间线</a>
+    <a href="downloads.html">往期下载</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="issue-tag">ISSUE 01 · 创刊号</div>
+  <h1>涅槃周刊 · 创刊号</h1>
+  <div class="sub">2009年12月 · 创始人 <strong>罗亦龙</strong>（2007级，16岁）· 17人核心团队</div>
+  <div class="quote-box">
+    "Through the darkest dark, may we see the light.<br>越万里之溟濛兮，见凤之流光。"
+    <cite>——涅槃周刊创刊词</cite>
+  </div>
+</div>
+
+<div class="info reveal">
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>编辑部</h3>
+      <p>17人核心团队<br>创始人罗亦龙领衔<br>自筹资金独立采编</p>
+    </div>
+    <div class="info-card">
+      <h3>四大板块</h3>
+      <p>校园 Campus<br>人物 People<br>观点 Opinion<br>文化 Culture</p>
+    </div>
+    <div class="info-card">
+      <h3>封面人物</h3>
+      <p>王铮校长（深中校长专访）<br>Ian Johnson（华尔街日报记者 / 2001年普利策奖得主）</p>
+    </div>
+    <div class="info-card">
+      <h3>时代背景</h3>
+      <p>H1N1甲流席卷校园<br>深中教育改革进行时<br>北大校长实名推荐制</p>
+    </div>
+  </div>
+</div>
+
+<section class="reveal">
+  <h2><span class="label">Articles</span>创刊号文章目录</h2>
+  <div class="articles">
+
+    <div class="article-card">
+      <span class="sec-tag tag-campus">校园 CAMPUS</span>
+      <h3>社会实践，是旅游，还是课程？</h3>
+      <p>H1N1疫情打乱深中综合实践活动计划，井冈山之行被迫取消。高二高三学生缴费后迟迟未获退款，教育局要求活动范围不得出深圳市——"我家就在深大旁边，我都住近深大了，还要走近深大？"记者采访综合实践课老师刘江华、吴敬东，探讨社会实践的真正意义。</p>
+    </div>
+
+    <div class="article-card">
+      <span class="sec-tag tag-campus">校园 CAMPUS</span>
+      <h3>深中流感进行时</h3>
+      <p>H1N1悄然入侵深中校园。11月16日高一三单元一班出现首例确诊，19日已有13名同学停课；七单元约15人发热却未停课引发争议。记者采访校医与学生处刑向钊主任，追问红外测温失灵、心智训练密集感染、西校区疫苗争议等焦点问题。</p>
+    </div>
+
+    <div class="article-card">
+      <span class="sec-tag tag-people">人物 PEOPLE</span>
+      <h3>专访 Ian Johnson（华尔街日报记者）</h3>
+      <p>2009年11月24日，2001年普利策新闻奖得主、华尔街日报驻华记者Ian Johnson到访深中。涅槃编辑部就中国教育改革、新闻透明度、网络封锁、中国年轻人等话题进行深度采访——「深中做的并不是表面工作，而是真真正正地在进行改革。」</p>
+    </div>
+
+    <div class="article-card">
+      <span class="sec-tag tag-people">人物 PEOPLE</span>
+      <h3>专访王铮校长</h3>
+      <p>11月26日中午，涅槃编辑部在迎宾馆六号楼对王铮校长进行一小时专访。话题涵盖自主招生（已申请三年）、北大校长实名推荐计划（推荐金柏宏、罗美钰、陈俊龙）、学分制改革与深中未来——「如果说我做的事情在我走了之后就做不下去了，那么我在这几年做的事情意义也不是很大。」</p>
+    </div>
+
+    <div class="article-card">
+      <span class="sec-tag tag-opinion">观点 OPINION</span>
+      <h3>我们需要更多的"GE"</h3>
+      <p>文 / Moyhoo。GE——草根精英（Grassroots Elites）。写给学弟学妹的信，质问何为"达"，批判"等资格够了再说"的逻辑陷阱，呼吁深中人此刻就该敢于表达、兼济天下——「栖于梧桐的深中人，能不能够成为草根精英，承担起兼济天下的重任？」</p>
+    </div>
+
+    <div class="article-card">
+      <span class="sec-tag tag-people">人物 PEOPLE</span>
+      <h3>学长团：传承深中文化</h3>
+      <p>文 / 磐石。学长团不是迎新接待组，而是深中文化的传承者——「学长团真正要做的，是将深中长期以来积淀的文化底蕴一代一代传承下去，而不是仅仅教会学弟学妹们如何在深中生活。」</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div style="font-size:1rem;color:#ccc;margin-bottom:.8rem;">越万里之溟濛兮，见凤之流光</div>
+  <p><a href="downloads.html">← 返回往期下载</a></p>
+  <p style="margin-top:.6rem;">
+    <a href="index.html">纪念刊</a> · <a href="about.html">关于</a> · <a href="timeline.html">时间线</a> · <a href="downloads.html">往期下载</a>
+  </p>
+  <p style="margin-top:.5rem;">涅槃周刊 · 深圳中学独立学生媒体 · 2009–2016</p>
+</footer>
+
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">↑</button>
+
+<!-- Mouse-follow glow effect -->
+<script>
+(function(){
+  var h=document.querySelector('.hamburger'),l=document.querySelector('nav .links');
+  if(h&&l){h.addEventListener('click',function(){l.classList.toggle('open');});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');});});}
+  var b=document.querySelector('.back-to-top');
+  if(b){window.addEventListener('scroll',function(){if(window.scrollY>400)b.classList.add('visible');else b.classList.remove('visible');});}
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+  function isDark(){return !window.matchMedia('(prefers-color-scheme: light)').matches;}
+  function glowColor(isNav){if(isNav)return isDark()?'rgba(255,255,255,0.12)':'rgba(0,0,0,0.06)';return isDark()?'rgba(232,93,4,0.15)':'rgba(212,82,0,0.12)';}
+  function borderColor(){return isDark()?'rgba(232,93,4,0.35)':'rgba(212,82,0,0.3)';}
+  var sels=['.article-card','.info-card'];
+  sels.forEach(function(s){document.querySelectorAll(s).forEach(function(el){
+    el.style.position=el.style.position||'relative';el.style.overflow='hidden';
+    var g=document.createElement('div');g.className='_mg';
+    g.style.cssText='position:absolute;top:0;left:0;width:200px;height:200px;border-radius:50%;pointer-events:none;z-index:2;opacity:0;transition:opacity .3s ease;transform:translate(-50%,-50%);';
+    el.appendChild(g);
+    el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect();g.style.left=(e.clientX-r.left)+'px';g.style.top=(e.clientY-r.top)+'px';g.style.background='radial-gradient(circle,'+glowColor(false)+' 0%,transparent 70%)';g.style.opacity='1';el.style.borderColor=borderColor();});
+    el.addEventListener('mouseleave',function(){g.style.opacity='0';el.style.borderColor='';});
+  });});
+  var nv=document.querySelector('nav');
+  if(nv){nv.style.overflow='visible';var ng=document.createElement('div');ng.className='_ng';ng.style.cssText='position:absolute;top:0;left:0;width:260px;height:260px;border-radius:50%;pointer-events:none;z-index:2;opacity:0;transition:opacity .35s ease;transform:translate(-50%,-50%);';nv.appendChild(ng);nv.addEventListener('mousemove',function(e){var r=nv.getBoundingClientRect();ng.style.left=(e.clientX-r.left)+'px';ng.style.top=(e.clientY-r.top)+'px';ng.style.background='radial-gradient(circle,'+glowColor(true)+' 0%,transparent 70%)';ng.style.opacity='1';});nv.addEventListener('mouseleave',function(){ng.style.opacity='0';});}
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change',function(){document.querySelectorAll('._mg,._ng').forEach(function(g){g.style.opacity='0';});});
+})();
+</script>
+</body>
+</html>

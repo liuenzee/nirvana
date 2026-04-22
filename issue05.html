@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="涅槃周刊第5期——2010年3月11日，深中食堂调查、出租司机专访、首次收费0.5元。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+<title>涅槃周刊 · 第5期</title>
+<style>
+  :root{--bg:#0a0a0a;--card:#141414;--accent:#e85d04;--text:#e0e0e0;--muted:#888;--border:#222}*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.8}html{scroll-behavior:smooth}a{color:var(--accent);text-decoration:none;transition:opacity .2s}a:hover{opacity:.8}
+  nav{position:sticky;top:.5rem;z-index:100;margin:.5rem 1rem 0;background:rgba(10,10,10,.42);-webkit-backdrop-filter:blur(40px) saturate(200%);backdrop-filter:blur(40px) saturate(200%);border:1px solid rgba(255,255,255,.08);border-radius:1rem;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2rem;box-shadow:0 4px 30px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.06);transition:background .3s,box-shadow .3s}
+  nav .logo{font-weight:700;font-size:1.1rem;letter-spacing:.05em}nav .links a{margin-left:1.6rem;font-size:.92rem;color:var(--muted)}nav .links a:hover{color:#fff}
+  .hamburger{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer;padding:.2rem;line-height:1}
+  .hero{text-align:center;padding:5rem 1.5rem 3rem;background:linear-gradient(180deg,#1a0a00 0%,var(--bg) 100%)}
+  .hero .issue-tag{display:inline-block;font-size:.82rem;color:var(--accent);border:1px solid var(--accent);border-radius:2rem;padding:.2rem .9rem;margin-bottom:1.2rem;letter-spacing:.05em}
+  .hero h1{font-size:2.4rem;font-weight:800;margin-bottom:.5rem}.hero .sub{color:var(--muted);font-size:1rem;margin-bottom:1.5rem}.hero .sub strong{color:var(--text)}
+  .hero .quote-box{max-width:640px;margin:0 auto;padding:1.2rem 1.5rem;border-left:3px solid var(--accent);text-align:left;background:var(--card);border-radius:0 .5rem .5rem 0;font-style:italic;color:#ccc;font-size:.95rem}
+  .hero .quote-box cite{display:block;font-style:normal;font-size:.8rem;color:var(--muted);margin-top:.5rem}
+  .info{max-width:820px;margin:0 auto;padding:2rem 1.5rem}.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+  .info-card{background:var(--card);border:1px solid var(--border);border-radius:.6rem;padding:1.2rem;transition:border-color .2s,transform .4s cubic-bezier(0.34,1.56,0.64,1),box-shadow .4s ease}
+  .info-card:hover{border-color:rgba(232,93,4,.3);transform:translateY(-2px);box-shadow:0 12px 32px rgba(232,93,4,.12)}
+  .info-card h3{font-size:.78rem;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.4rem;font-weight:600}.info-card p{font-size:.86rem;color:var(--muted)}
+  section{max-width:820px;margin:0 auto;padding:2.5rem 1.5rem}section h2{font-size:1.5rem;margin-bottom:1.2rem}
+  section h2 .label{display:block;font-size:.75rem;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-bottom:.2rem}
+  .articles{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.2rem}
+  .article-card{background:var(--card);border:1px solid var(--border);border-radius:.6rem;padding:1.3rem;transition:border-color .25s,transform .4s cubic-bezier(0.34,1.56,0.64,1),box-shadow .4s ease;position:relative;overflow:hidden}
+  .article-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 12px 32px rgba(232,93,4,.12)}
+  .sec-tag{display:inline-block;font-size:.68rem;padding:.12rem .55rem;border-radius:2rem;margin-bottom:.5rem;font-weight:600;letter-spacing:.04em}
+  .tag-focus{background:rgba(232,93,4,.15);color:var(--accent)}.tag-people{background:rgba(59,130,246,.15);color:#60a5fa}
+  .tag-culture{background:rgba(20,184,166,.15);color:#2dd4bf}.tag-opinion{background:rgba(245,158,11,.15);color:#fbbf24}
+  .tag-editorial{background:rgba(139,92,246,.15);color:#a78bfa}
+  .article-card h3{font-size:1rem;font-weight:700;margin-bottom:.3rem}.article-card p{font-size:.85rem;color:var(--muted)}
+  footer{text-align:center;padding:3rem 1.5rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}footer a{color:var(--accent)}
+  .back-to-top{position:fixed;bottom:2rem;right:2rem;z-index:99;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s,box-shadow .3s;pointer-events:none;box-shadow:0 4px 15px rgba(232,93,4,.3)}
+  .back-to-top.visible{opacity:1;transform:translateY(0);pointer-events:auto}.back-to-top:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(232,93,4,.5)}
+  .liquid-glass-nav{position:sticky;overflow:visible}
+  .liquid-glass-nav::before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:1;background:radial-gradient(ellipse 120% 60% at 50% -10%,rgba(255,255,255,0.18) 0%,transparent 60%),radial-gradient(ellipse 80% 40% at 50% 110%,rgba(255,255,255,0.06) 0%,transparent 50%);mask-image:linear-gradient(180deg,rgba(0,0,0,1) 0%,rgba(0,0,0,0.3) 40%,rgba(0,0,0,0) 55%,rgba(0,0,0,0.15) 85%,rgba(0,0,0,0.5) 100%);-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,1) 0%,rgba(0,0,0,0.3) 40%,rgba(0,0,0,0) 55%,rgba(0,0,0,0.15) 85%,rgba(0,0,0,0.5) 100%)}
+  .liquid-glass-nav::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:2;box-shadow:inset 0 1px 1px rgba(255,255,255,0.25),inset 0 -1px 1px rgba(255,255,255,0.05),inset 1px 0 1px rgba(255,255,255,0.08),inset -1px 0 1px rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-top-color:rgba(255,255,255,0.22);border-bottom-color:rgba(255,255,255,0.04)}
+  nav.liquid-glass-nav{-webkit-backdrop-filter:blur(40px) saturate(200%) contrast(1.05) brightness(1.02)!important;backdrop-filter:blur(40px) saturate(200%) contrast(1.05) brightness(1.02)!important;background:rgba(10,10,10,0.35)!important;border:none!important;box-shadow:0 8px 32px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.06) inset!important}
+  @keyframes heroFadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+  .hero>*{opacity:0;animation:heroFadeUp .9s cubic-bezier(0.16,1,0.3,1) forwards}.hero>*:nth-child(1){animation-delay:.1s}.hero>*:nth-child(2){animation-delay:.2s}.hero>*:nth-child(3){animation-delay:.3s}.hero>*:nth-child(4){animation-delay:.4s}
+  .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(0.16,1,0.3,1),transform .8s cubic-bezier(0.16,1,0.3,1)}.reveal.visible{opacity:1;transform:translateY(0)}
+  @media(prefers-color-scheme:light){:root{--bg:#f8f7f4;--card:#fff;--text:#1a1a1a;--muted:#666;--border:#e0ddd8}nav{background:rgba(255,255,255,.45)!important;border-color:rgba(0,0,0,.08)!important;box-shadow:0 4px 30px rgba(0,0,0,.06),inset 0 1px 0 rgba(255,255,255,.8)!important}.hero{background:linear-gradient(180deg,#f0ebe3 0%,var(--bg) 100%)}.hero .quote-box{background:var(--card);color:#555}.liquid-glass-nav::before{background:radial-gradient(ellipse 120% 60% at 50% -10%,rgba(255,255,255,0.5) 0%,transparent 60%),radial-gradient(ellipse 80% 40% at 50% 110%,rgba(255,255,255,0.15) 0%,transparent 50%)}.liquid-glass-nav::after{box-shadow:inset 0 1px 1px rgba(255,255,255,0.7),inset 0 -1px 1px rgba(0,0,0,0.03),inset 1px 0 1px rgba(255,255,255,0.3),inset -1px 0 1px rgba(255,255,255,0.3);border-color:rgba(255,255,255,0.5);border-top-color:rgba(255,255,255,0.7);border-bottom-color:rgba(0,0,0,0.04)}nav.liquid-glass-nav{background:rgba(255,255,255,0.38)!important;box-shadow:0 8px 32px rgba(0,0,0,0.08),0 1px 0 rgba(255,255,255,0.9) inset!important}}
+  @media(prefers-color-scheme:light) and (max-width:600px){nav .links{background:rgba(255,255,255,.85)!important;border-color:rgba(0,0,0,.06)!important}}
+  @media(max-width:600px){.hamburger{display:block}nav .links{display:none;position:absolute;top:calc(100% + .5rem);left:0;right:0;background:rgba(10,10,10,.85);-webkit-backdrop-filter:blur(40px) saturate(200%);backdrop-filter:blur(40px) saturate(200%);flex-direction:column;padding:1rem 2rem;border-radius:1rem;border:1px solid rgba(255,255,255,.08);box-shadow:0 8px 30px rgba(0,0,0,.3)}nav .links.open{display:flex}nav .links a{margin-left:0!important;padding:.5rem 0}.articles{grid-template-columns:1fr}.hero h1{font-size:1.8rem}nav{margin:.3rem .5rem 0;top:.3rem;border-radius:.8rem;padding:.7rem 1rem}}
+</style>
+</head>
+<body>
+<nav class="liquid-glass-nav"><div class="logo">涅槃</div><button class="hamburger" aria-label="菜单">☰</button><div class="links"><a href="index.html">纪念刊</a><a href="about.html">关于涅槃</a><a href="timeline.html">时间线</a><a href="downloads.html">往期下载</a></div></nav>
+<div class="hero">
+  <div class="issue-tag">ISSUE 05 · 第伍期</div>
+  <h1>涅槃周刊 · 第伍期</h1>
+  <div class="sub">2010年3月11日 · 主编 <strong>罗亦龙</strong> · 排版 <strong>马可</strong> · 封面/封底设计 <strong>朱喆</strong> / <strong>刘欣怡</strong></div>
+  <div class="quote-box">"你们，是否愿意，成为那道光呢？"<cite>——编辑部致读者书</cite></div>
+</div>
+<div class="info reveal"><div class="info-grid">
+  <div class="info-card"><h3>聚焦校园生活</h3><p>深中食堂调查<br>自习地点攻略<br>外卖是怎样炼成的</p></div>
+  <div class="info-card"><h3>城市人物</h3><p>深圳出租车司机专访<br>「我们只是深圳的过客」</p></div>
+  <div class="info-card"><h3>影评三连</h3><p>《搏击俱乐部》<br>《阿凡达》<br>《电锯惊魂》系列</p></div>
+  <div class="info-card"><h3>里程碑</h3><p>涅槃首次收费（0.5元/份）<br>致读者书解释收费原因<br>英孚教育广告</p></div>
+</div></div>
+<section class="reveal">
+  <h2><span class="label">Articles</span>第5期文章目录</h2>
+  <div class="articles">
+    <div class="article-card"><span class="sec-tag tag-focus">聚焦 FOCUS</span><h3>关于深中的食堂</h3><p>记者章鱼、SiH4。调查饭堂容量（约600人）、高峰人流（中午1300人）、价格体系（0.6元青菜至8元特色餐），采访食堂负责人回应学生对价格、卫生、菜品的疑问。</p></div>
+    <div class="article-card"><span class="sec-tag tag-focus">聚焦 FOCUS</span><h3>深中自习地点攻略</h3><p>实用向校园指南——图书馆、天井、空教室、信息楼……深中人的自习秘境大公开。</p></div>
+    <div class="article-card"><span class="sec-tag tag-focus">聚焦 FOCUS</span><h3>深中外卖是怎样炼成的？</h3><p>追踪校园外卖从点单到送达的全链条——没有门禁制度的深中，外卖如何成为一种校园文化？</p></div>
+    <div class="article-card"><span class="sec-tag tag-people">人物 PEOPLE</span><h3>"我们只是深圳的过客"——出租司机有话说</h3><p>涅槃首次走出校园的人物特写。记者坐上出租车，倾听深圳街头最沉默的一群人——他们的漂泊、生计与城市归属感。</p></div>
+    <div class="article-card"><span class="sec-tag tag-culture">文化 CULTURE</span><h3>【角落】无题</h3><p>文化版短篇。</p></div>
+    <div class="article-card"><span class="sec-tag tag-culture">文化 CULTURE</span><h3>【时代】沉静的漂流</h3><p>关于陌生的本子和陌生的人。11页长篇纪实文学，本期封面故事，记录一场跨越陌生人之间的漂流日记实验。</p></div>
+    <div class="article-card"><span class="sec-tag tag-culture">文化 CULTURE</span><h3>【我们】颠覆的极致——评《搏击俱乐部》</h3><p>大卫·芬奇的地下世界。当消费主义把人变成宜家目录的奴隶，泰勒·德顿用一记老拳打醒了所有人。</p></div>
+    <div class="article-card"><span class="sec-tag tag-culture">文化 CULTURE</span><h3>【我们】跪求中国的"阿凡达"</h3><p>卡梅隆的视觉革命之后，中国电影还要等多久？从技术差距到叙事野心的全面反思。</p></div>
+    <div class="article-card"><span class="sec-tag tag-culture">文化 CULTURE</span><h3>【我们】善否?! 恶否?!——评《电锯惊魂》系列</h3><p>竖锯的道德审判——恐怖片外衣下的伦理困境与人性拷问。</p></div>
+    <div class="article-card"><span class="sec-tag tag-opinion">观点 OPINION</span><h3>经济、反腐、民主推进、农村——"两会"恒定的话题</h3><p>高中生视角下的两会观察。那些年年重复却年年悬而未决的议题。</p></div>
+    <div class="article-card"><span class="sec-tag tag-opinion">观点 OPINION</span><h3>毛主席万岁!——哈佛模联2010</h3><p>9页重磅长文。中共中央政治局常委会（1966）模拟，深中学生在哈佛模联中扮演文革时期的政治角色，以历史情境反思权力与信仰。</p></div>
+    <div class="article-card"><span class="sec-tag tag-opinion">观点 OPINION</span><h3>我们究竟缺少什么？</h3><p>追问深中人——在自由与资源的富矿中，我们真正匮乏的是什么？</p></div>
+    <div class="article-card"><span class="sec-tag tag-opinion">观点 OPINION</span><h3>两种中国人</h3><p>身份认同的裂变——当代中国人的两副面孔与内心挣扎。</p></div>
+    <div class="article-card"><span class="sec-tag tag-editorial">编辑部 EDITORIAL</span><h3>致读者书：你们，是否愿意，成为那道光呢？</h3><p>涅槃创刊词的回响。编辑部向每一位读者发出邀请——不只是阅读者，更是参与者、建设者、那道穿越溟濛的光。</p></div>
+    <div class="article-card"><span class="sec-tag tag-editorial">编辑部 EDITORIAL</span><h3>涅槃周刊为什么要收费？</h3><p>从第5期起每份收费0.5元。编辑部坦诚解释财务压力——印刷成本、自筹资金的困境，以及收费背后对独立媒体尊严的坚持。</p></div>
+  </div>
+</section>
+<footer><div style="font-size:1rem;color:#ccc;margin-bottom:.8rem;">越万里之溟濛兮，见凤之流光</div><p><a href="downloads.html">&larr; 返回往期下载</a></p><p style="margin-top:.6rem;"><a href="index.html">纪念刊</a> · <a href="about.html">关于</a> · <a href="timeline.html">时间线</a> · <a href="downloads.html">往期下载</a></p><p style="margin-top:.5rem;">涅槃周刊 · 深圳中学独立学生媒体 · 2009–2016</p></footer>
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">&uarr;</button>
+<script>
+(function(){var h=document.querySelector('.hamburger'),l=document.querySelector('nav .links');if(h&&l){h.addEventListener('click',function(){l.classList.toggle('open');});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');});});}var b=document.querySelector('.back-to-top');if(b){window.addEventListener('scroll',function(){if(window.scrollY>400)b.classList.add('visible');else b.classList.remove('visible');});}var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});function isDark(){return!window.matchMedia('(prefers-color-scheme: light)').matches;}function gc(n){if(n)return isDark()?'rgba(255,255,255,0.12)':'rgba(0,0,0,0.06)';return isDark()?'rgba(232,93,4,0.15)':'rgba(212,82,0,0.12)';}function bc(){return isDark()?'rgba(232,93,4,0.35)':'rgba(212,82,0,0.3)';}['.article-card','.info-card'].forEach(function(s){document.querySelectorAll(s).forEach(function(el){el.style.position=el.style.position||'relative';el.style.overflow='hidden';var g=document.createElement('div');g.className='_mg';g.style.cssText='position:absolute;top:0;left:0;width:200px;height:200px;border-radius:50%;pointer-events:none;z-index:2;opacity:0;transition:opacity .3s ease;transform:translate(-50%,-50%)';el.appendChild(g);el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect();g.style.left=(e.clientX-r.left)+'px';g.style.top=(e.clientY-r.top)+'px';g.style.background='radial-gradient(circle,'+gc(false)+' 0%,transparent 70%)';g.style.opacity='1';el.style.borderColor=bc();});el.addEventListener('mouseleave',function(){g.style.opacity='0';el.style.borderColor='';});});});var nv=document.querySelector('nav');if(nv){var ng=document.createElement('div');ng.className='_ng';ng.style.cssText='position:absolute;top:0;left:0;width:260px;height:260px;border-radius:50%;pointer-events:none;z-index:2;opacity:0;transition:opacity .35s ease;transform:translate(-50%,-50%)';nv.appendChild(ng);nv.addEventListener('mousemove',function(e){var r=nv.getBoundingClientRect();ng.style.left=(e.clientX-r.left)+'px';ng.style.top=(e.clientY-r.top)+'px';ng.style.background='radial-gradient(circle,'+gc(true)+' 0%,transparent 70%)';ng.style.opacity='1';});nv.addEventListener('mouseleave',function(){ng.style.opacity='0';});}window.matchMedia('(prefers-color-scheme: light)').addEventListener('change',function(){document.querySelectorAll('._mg,._ng').forEach(function(g){g.style.opacity='0';});});})();
+</script>
+</body>
+</html>

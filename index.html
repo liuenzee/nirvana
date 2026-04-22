@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="《涅槃周刊》停刊十周年纪念刊——参与投稿、加入编辑部、共建涅槃线上档案库。">
+<meta property="og:title" content="《涅槃周刊》纪念刊">
+<meta property="og:description" content="《涅槃周刊》停刊十周年纪念刊——参与投稿、加入编辑部、共建涅槃线上档案库。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+<title>《涅槃周刊》 纪念刊</title>
+<style>
+  :root { --bg: #0a0a0a; --card: #141414; --accent: #e85d04; --text: #e0e0e0; --muted: #888; --border: #222; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+  html { scroll-behavior: smooth; }
+  a { color: var(--accent); text-decoration: none; transition: opacity .2s; }
+  a:hover { opacity: .8; }
+  /* NAV */
+  nav { position: sticky; top: .5rem; z-index: 100; margin: .5rem 1rem 0; background: rgba(10,10,10,.42); -webkit-backdrop-filter: blur(40px) saturate(200%); backdrop-filter: blur(40px) saturate(200%); border: 1px solid rgba(255,255,255,.08); border-radius: 1rem; display: flex; align-items: center; justify-content: space-between; padding: .9rem 2rem; box-shadow: 0 4px 30px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.06); transition: background .3s, box-shadow .3s; }
+  nav .logo { font-weight: 700; font-size: 1.1rem; letter-spacing: .05em; }
+  nav .links a { margin-left: 1.6rem; font-size: .92rem; color: var(--muted); }
+  nav .links a:hover, nav .links a.active { color: #fff; }
+  /* HERO */
+  .hero { text-align: center; padding: 6rem 1.5rem 4rem; background: linear-gradient(180deg, #1a0a00 0%, var(--bg) 100%); }
+  .hero .tag { display: inline-block; font-size: .85rem; color: var(--accent); border: 1px solid var(--accent); border-radius: 2rem; padding: .25rem 1rem; margin-bottom: 1.5rem; }
+  .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 1rem; }
+  .hero h1 span { display: block; font-size: 1.5rem; font-weight: 400; color: var(--muted); margin-top: .3rem; }
+  .hero p { max-width: 640px; margin: 0 auto 2rem; color: var(--muted); font-size: 1.05rem; }
+  .hero .quote { font-style: italic; color: #bbb; margin-bottom: 2rem; font-size: 1rem; }
+  .hero .btns a { display: inline-block; margin: .4rem; padding: .65rem 1.8rem; border-radius: .4rem; font-size: .95rem; }
+  .hero .btns a.primary { background: var(--accent); color: #fff; }
+  .hero .btns a.secondary { border: 1px solid var(--border); color: var(--text); }
+  /* SECTIONS */
+  section { max-width: 900px; margin: 0 auto; padding: 4rem 1.5rem; }
+  section h2 { font-size: 1.8rem; margin-bottom: .3rem; }
+  section h2 .label { display: block; font-size: .8rem; color: var(--accent); text-transform: uppercase; font-weight: 600; letter-spacing: .1em; margin-bottom: .3rem; }
+  section > p { color: var(--muted); margin-bottom: 1.5rem; font-size: 1rem; }
+  .blockquote { border-left: 3px solid var(--accent); padding: .8rem 1.2rem; margin: 1.5rem 0; color: #ccc; font-style: italic; background: var(--card); border-radius: 0 .4rem .4rem 0; }
+  .blockquote cite { display: block; margin-top: .4rem; font-style: normal; font-size: .85rem; color: var(--muted); }
+  /* STATS */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin: 2rem 0; }
+  .stat { background: var(--card); border: 1px solid var(--border); border-radius: .6rem; padding: 1.2rem; text-align: center; }
+  .stat .num { font-size: 2rem; font-weight: 800; color: var(--accent); }
+  .stat .desc { font-size: .82rem; color: var(--muted); margin-top: .2rem; }
+  /* CARDS */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin-top: 1.5rem; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: .6rem; padding: 1.5rem; }
+  .card .icon { font-size: 1.6rem; margin-bottom: .6rem; }
+  .card h3 { font-size: 1.05rem; margin-bottom: .4rem; }
+  .card p { font-size: .9rem; color: var(--muted); }
+  /* CONTACT */
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .contact-item { background: var(--card); border: 1px solid var(--border); border-radius: .6rem; padding: 1.2rem; }
+  .contact-item .icon { font-size: 1.2rem; margin-right: .4rem; }
+  .contact-item .label { font-size: .82rem; color: var(--muted); }
+  .contact-item .value { font-size: .95rem; margin-top: .2rem; word-break: break-all; }
+  /* SUBMISSION METHODS */
+  .submit-section { background: var(--card); border: 1px solid var(--border); border-radius: .8rem; padding: 2rem; margin-top: 2rem; }
+  .submit-section h3 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--accent); }
+  .submit-method { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+  .submit-method:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .submit-method h4 { font-size: 1rem; margin-bottom: .5rem; }
+  .submit-method p, .submit-method li { font-size: .9rem; color: var(--muted); }
+  .submit-method ul { list-style: none; padding: 0; }
+  .submit-method ul li { padding: .3rem 0; padding-left: 1.2rem; position: relative; }
+  .submit-method ul li::before { content: "·"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+  /* REFS */
+  .refs { margin-top: 2rem; }
+  .ref-item { display: flex; align-items: flex-start; gap: .8rem; padding: .8rem 0; border-bottom: 1px solid var(--border); }
+  .ref-item .ref-icon { font-size: 1rem; flex-shrink: 0; margin-top: .15rem; }
+  .ref-item .ref-body a { font-size: .95rem; }
+  .ref-item .ref-body .ref-meta { font-size: .8rem; color: var(--muted); }
+  /* FOOTER */
+  footer { text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .85rem; }
+  footer .motto { font-size: 1rem; color: #ccc; margin-bottom: .8rem; }
+  footer a { color: var(--muted); margin: 0 .5rem; }
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 2rem; }
+    .hero h1 span { font-size: 1.1rem; }
+    nav { padding: .7rem 1rem; margin: .3rem .5rem 0; top: .3rem; border-radius: .8rem; }
+    nav .links a { margin-left: .8rem; font-size: .8rem; }
+    section { padding: 2.5rem 1rem; }
+  }
+
+
+  /* === LIGHT THEME === */
+  /* Liquid glass edge refraction */
+  .liquid-glass-nav { position: sticky; overflow: visible; }
+  .liquid-glass-nav::before { content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none; z-index:1; background: radial-gradient(ellipse 120% 60% at 50% -10%, rgba(255,255,255,0.18) 0%, transparent 60%), radial-gradient(ellipse 80% 40% at 50% 110%, rgba(255,255,255,0.06) 0%, transparent 50%); mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.15) 85%, rgba(0,0,0,0.5) 100%); -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.15) 85%, rgba(0,0,0,0.5) 100%); }
+  .liquid-glass-nav::after { content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none; z-index:2; box-shadow: inset 0 1px 1px rgba(255,255,255,0.25), inset 0 -1px 1px rgba(255,255,255,0.05), inset 1px 0 1px rgba(255,255,255,0.08), inset -1px 0 1px rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-top-color: rgba(255,255,255,0.22); border-bottom-color: rgba(255,255,255,0.04); }
+  nav.liquid-glass-nav { -webkit-backdrop-filter: blur(40px) saturate(200%) contrast(1.05) brightness(1.02) !important; backdrop-filter: blur(40px) saturate(200%) contrast(1.05) brightness(1.02) !important; background: rgba(10,10,10,0.35) !important; border: none !important; box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.06) inset !important; }
+
+  @media (prefers-color-scheme: light) {
+    .liquid-glass-nav::before { background: radial-gradient(ellipse 120% 60% at 50% -10%, rgba(255,255,255,0.5) 0%, transparent 60%), radial-gradient(ellipse 80% 40% at 50% 110%, rgba(255,255,255,0.15) 0%, transparent 50%); }
+    .liquid-glass-nav::after { box-shadow: inset 0 1px 1px rgba(255,255,255,0.7), inset 0 -1px 1px rgba(0,0,0,0.03), inset 1px 0 1px rgba(255,255,255,0.3), inset -1px 0 1px rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.5); border-top-color: rgba(255,255,255,0.7); border-bottom-color: rgba(0,0,0,0.04); }
+    nav.liquid-glass-nav { background: rgba(255,255,255,0.38) !important; box-shadow: 0 8px 32px rgba(0,0,0,0.08), 0 1px 0 rgba(255,255,255,0.9) inset !important; }
+
+    :root { --bg: #f5f5f0; --card: #ffffff; --accent: #c44d03; --text: #1a1a1a; --muted: #555; --border: #ddd; }
+    nav { background: rgba(255,255,255,.45) !important; border-color: rgba(0,0,0,.08) !important; box-shadow: 0 4px 30px rgba(0,0,0,.06), inset 0 1px 0 rgba(255,255,255,.8) !important; }
+    nav .links a:hover, nav .links a.active { color: #1a1a1a; }
+    .hero { background: linear-gradient(180deg, #fff5eb 0%, var(--bg) 100%); }
+    .blockquote { color: #333; background: #f0f0ea; }
+    .tl-item .tl-quote { color: #444; background: #f0f0ea; }
+    .notice, .notice-box { background: #fffbe6; border-color: #e0d88c; color: #665; }
+    .tag-stopped { background: #ffe; color: #886; }
+    .tag-issue { background: #e6f5e6; color: #363; }
+    .tag-milestone { background: #fff0e0; color: #c44d03; }
+    .tag-media { background: #e6e6f5; color: #448; }
+    .tag-event { background: #f5e6e6; color: #844; }
+    .tag-special { background: #f5f5e0; color: #884; }
+    .tag-community { background: #e0f5f5; color: #466; }
+    .tag-revival { background: #e0f5e6; color: #384; }
+    .year-header { background: #f0f0ea; }
+    .dl-table tr:hover { background: rgba(196,77,3,.06); }
+    .hero .quote { color: #555; }
+    .person .avatar { background: #e0e0d8; }
+    footer { border-top-color: #ddd; }
+    footer .motto { color: #333; }
+  }
+
+  /* === SCROLL REVEAL ANIMATIONS === */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .8s cubic-bezier(0.16, 1, 0.3, 1), transform .8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.from-left {
+    transform: translateX(-50px) translateY(0);
+  }
+  .reveal.from-right {
+    transform: translateX(50px) translateY(0);
+  }
+  .reveal.scale-up {
+    transform: scale(0.85) translateY(20px);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  .reveal .stagger-child {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .6s cubic-bezier(0.16, 1, 0.3, 1), transform .6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible .stagger-child {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* === HERO ENTRANCE === */
+  @keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero > * {
+    opacity: 0;
+    animation: heroFadeUp .9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .hero > *:nth-child(1) { animation-delay: .1s; }
+  .hero > *:nth-child(2) { animation-delay: .25s; }
+  .hero > *:nth-child(3) { animation-delay: .4s; }
+  .hero > *:nth-child(4) { animation-delay: .55s; }
+  .hero > *:nth-child(5) { animation-delay: .7s; }
+  .hero > *:nth-child(6) { animation-delay: .85s; }
+
+  /* === HOVER MICRO-INTERACTIONS === */
+  .card, .stat, .person, .contact-item, .source-card, .batch-card, .media-item {
+    transition: transform .4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow .4s ease;
+  }
+  .card:hover, .stat:hover, .person:hover, .contact-item:hover, .source-card:hover, .batch-card:hover, .media-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(232, 93, 4, .15);
+  }
+  .blockquote, .tl-item .tl-quote {
+    transition: transform .3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color .3s ease;
+  }
+  .blockquote:hover, .tl-item .tl-quote:hover {
+    transform: translateX(4px);
+    border-color: var(--accent);
+  }
+  .ref-item, .online-item {
+    transition: transform .3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .ref-item:hover, .online-item:hover {
+    transform: translateX(6px);
+  }
+  .submit-section {
+    transition: border-color .4s ease, box-shadow .4s ease;
+  }
+  .submit-section:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(232, 93, 4, .1);
+  }
+  .hero .btns a, .source-card .btn, .source-card .btn-outline, .batch-card .btn {
+    transition: transform .3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow .3s ease, opacity .2s;
+  }
+  .hero .btns a:hover, .source-card .btn:hover, .batch-card .btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 15px rgba(232, 93, 4, .25);
+  }
+  .tl-item .tl-dot {
+    transition: transform .3s cubic-bezier(0.34, 1.56, 0.64, 1), background .3s ease;
+  }
+  .tl-item:hover .tl-dot {
+    transform: scale(1.5);
+    background: var(--accent);
+  }
+  .year-marker .dot {
+    transition: transform .4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow .4s ease;
+  }
+  .year-marker:hover .dot {
+    transform: translateY(-50%) scale(1.3);
+    box-shadow: 0 0 15px rgba(232, 93, 4, .4);
+  }
+  .year-nav a {
+    transition: all .3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .year-nav a:hover {
+    transform: scale(1.08);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .dl-table tr {
+    transition: background .3s ease;
+  }
+  .notice, .notice-box {
+    transition: transform .3s cubic-bezier(0.16, 1, 0.3, 1), border-color .3s ease;
+  }
+  .notice:hover, .notice-box:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+  }
+
+
+  /* === BACK TO TOP === */
+  .back-to-top { position: fixed; bottom: 2rem; right: 2rem; z-index: 99; width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #fff; border: none; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(10px); transition: opacity .3s ease, transform .3s ease, box-shadow .3s ease; pointer-events: none; box-shadow: 0 4px 15px rgba(232,93,4,.3); }
+  .back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(232,93,4,.5); }
+
+  /* === HAMBURGER MENU === */
+  .hamburger { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; padding: .2rem; line-height: 1; }
+  @media (max-width: 600px) {
+    .hamburger { display: block; }
+    nav .links { display: none; position: absolute; top: calc(100% + .5rem); left: 0; right: 0; background: rgba(10,10,10,.85); -webkit-backdrop-filter: blur(40px) saturate(200%); backdrop-filter: blur(40px) saturate(200%); flex-direction: column; padding: 1rem 2rem; border-radius: 1rem; border: 1px solid rgba(255,255,255,.08); box-shadow: 0 8px 30px rgba(0,0,0,.3); }
+    nav .links.open { display: flex; }
+    nav .links a { margin-left: 0 !important; padding: .5rem 0; }
+  }
+  @media (prefers-color-scheme: light) and (max-width: 600px) {
+    nav .links { background: rgba(255,255,255,.85) !important; border-color: rgba(0,0,0,.06) !important; box-shadow: 0 8px 30px rgba(0,0,0,.06) !important; }
+  }
+
+
+  /* === LIQUID GLASS (shuding/liquid-glass) === */
+  .hero .btns a.primary.lg-on { background: rgba(232,93,4,.6); box-shadow: 0 6px 20px rgba(0,0,0,.22), inset 0 1.5px 0 rgba(255,255,255,.28), inset 0 -2px 8px rgba(0,0,0,.1); border: 1px solid rgba(255,255,255,.14); }
+  .hero .btns a.secondary.lg-on { background: rgba(20,20,20,.38); box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 4px 15px rgba(0,0,0,.18); border: 1px solid rgba(255,255,255,.1); }
+  .source-card .btn.lg-on, .batch-card .btn.lg-on { background: rgba(232,93,4,.6); box-shadow: 0 4px 15px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.22), inset 0 -2px 6px rgba(0,0,0,.1); border: 1px solid rgba(255,255,255,.12); }
+  .source-card .btn-outline.lg-on { background: rgba(20,20,20,.32); box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 2px 10px rgba(0,0,0,.12); border: 1px solid rgba(255,255,255,.1); }
+  .year-nav a.lg-on { background: rgba(20,20,20,.32); box-shadow: inset 0 1px 0 rgba(255,255,255,.1); }
+  nav.lg-on { box-shadow: 0 4px 30px rgba(0,0,0,.28), inset 0 1.5px 0 rgba(255,255,255,.2), inset 0 -1px 0 rgba(0,0,0,.1); }
+  .hero .btns a.lg-on:hover { box-shadow: 0 8px 28px rgba(0,0,0,.28), inset 0 1.5px 0 rgba(255,255,255,.32), inset 0 -2px 8px rgba(0,0,0,.06); }
+  .source-card .btn.lg-on:hover, .batch-card .btn.lg-on:hover { box-shadow: 0 6px 22px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.28), inset 0 -2px 6px rgba(0,0,0,.06); }
+  .year-nav a.lg-on:hover { box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 2px 10px rgba(0,0,0,.12); }
+  @media (prefers-color-scheme: light) {
+    .hero .btns a.primary.lg-on { background: rgba(196,77,3,.6); box-shadow: 0 4px 18px rgba(0,0,0,.08), inset 0 1.5px 0 rgba(255,255,255,.45), inset 0 -2px 6px rgba(0,0,0,.05); }
+    .hero .btns a.secondary.lg-on { background: rgba(255,255,255,.42); border-color: rgba(0,0,0,.1); box-shadow: inset 0 1px 0 rgba(255,255,255,.85), 0 4px 15px rgba(0,0,0,.06); }
+    .source-card .btn.lg-on, .batch-card .btn.lg-on { background: rgba(196,77,3,.6); box-shadow: 0 4px 15px rgba(0,0,0,.08), inset 0 1px 0 rgba(255,255,255,.4), inset 0 -2px 6px rgba(0,0,0,.04); }
+    .source-card .btn-outline.lg-on { background: rgba(255,255,255,.42); border-color: rgba(0,0,0,.08); box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 2px 8px rgba(0,0,0,.04); }
+    .year-nav a.lg-on { background: rgba(255,255,255,.42); box-shadow: inset 0 1px 0 rgba(255,255,255,.85); }
+    nav.lg-on { box-shadow: 0 4px 30px rgba(0,0,0,.06), inset 0 1.5px 0 rgba(255,255,255,.92), inset 0 -1px 0 rgba(0,0,0,.04); }
+  }
+
+</style>
+</head>
+<body>
+<nav class="liquid-glass-nav">
+  <div class="logo">涅槃</div>
+  <div class="links">
+    <a href="index.html" class="active">纪念刊</a>
+    <a href="about.html">关于涅槃</a>
+    <a href="timeline.html">时间线</a>
+    <a href="downloads.html">往期下载</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="tag">🔥 2026 · 停刊十周年</div>
+  <h1>《涅槃周刊》<span>纪念刊</span></h1>
+  <p>在停刊十年之际，我们以纪念刊为起点，让「涅槃」以新媒体与年刊的形式，继续生长。</p>
+  <div class="quote">"Through the darkest dark, may we see the light"</div>
+  <div class="btns">
+    <a href="#participate" class="primary">参与纪念刊 →</a>
+    <a href="about.html" class="secondary">了解涅槃周刊</a>
+    <a href="downloads.html" class="secondary">📥 往期PDF下载</a>
+  </div>
+</div>
+
+<section>
+  <h2><span class="label">缘起</span>为什么重启涅槃</h2>
+  <p>2009年冬天，《涅槃周刊》在深圳中学的土壤中诞生。从2009年12月9日首发，到2016年6月停刊，我们一共发行了 55 期周刊、3 期特刊与 6 期年刊。</p>
+  <p>这并非只为怀旧，更是一场严肃而温情的回溯——回溯一本学生刊物的生命史，回溯教育改革中的鲜活细节与思想争鸣，回看一片土壤如何孕育了一所独特的学校、一本独特的杂志，以及一群被深刻改变的人。</p>
+  <div class="blockquote">可能是任何一份中国主流媒体都不能企及的杂志。<cite>——《中国新闻周刊》，2011年</cite></div>
+  <div class="stats">
+    <div class="stat"><div class="num">55+</div><div class="desc">期刊物</div></div>
+    <div class="stat"><div class="num">1200+</div><div class="desc">份发行量峰值</div></div>
+    <div class="stat"><div class="num">7</div><div class="desc">个学年</div></div>
+    <div class="stat"><div class="num">10+</div><div class="desc">所学校覆盖</div></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="label">2026 · 停刊十周年</span>《涅槃周刊·纪念刊》</h2>
+  <p>通过微信公众号等新载体，持续汇集文字、记录声音、连结读者，推动「年刊化」的延续与新生。</p>
+  <p><a href="https://mp.weixin.qq.com/s/tJDFwWaOhmQI_pAHK4e3Mg" target="_blank">阅读发起公告 →</a></p>
+</section>
+
+<section id="participate">
+  <h2><span class="label">参与</span>三种方式加入我们</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="icon">✍️</div>
+      <h3>有故事分享的你</h3>
+      <p>如果你曾参与、阅读、关注过《涅槃周刊》，珍藏着与涅槃有关的记忆、文章、照片或物件，请向公众号投稿。我们的个人经历，本身就是这段历史的一部分。</p>
+    </div>
+    <div class="card">
+      <div class="icon">📝</div>
+      <h3>纪念刊编辑部成员</h3>
+      <p>如果你愿意投入时间与心力，欢迎加入纪念刊的筹备与编辑工作——内容策划、文编、采访、视觉设计，与我们一起让思辨与怀念凝结成册。</p>
+    </div>
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h3>持续关注与支持的人</h3>
+      <p>关注公众号、加入社群，帮助传播每一次推送。你的每一次阅读、转发与留言，都是在为涅槃的新生注入能量。</p>
+    </div>
+  </div>
+
+  <div class="submit-section">
+    <h3>📮 投稿与共建方式</h3>
+    <div class="submit-method">
+      <h4>方式一：邮箱投稿（适用于文档、大文件及链接）</h4>
+      <ul>
+        <li>主邮箱：nirvanaweekly2009&#64;gmail&#46;com</li>
+        <li>邮件标题格式：<strong>档案库投稿 - 姓名/昵称 - 简要说明</strong></li>
+        <li>大文件可附网盘链接，请尽量标注：作者-标题-日期-类型</li>
+        <li>资料库技术组专项负责人：@赵芊一 iris20071203&#64;outlook&#46;com</li>
+        <li>图片、影像美编组：@KK trieudungtranh&#64;gmail&#46;com</li>
+      </ul>
+    </div>
+    <div class="submit-method">
+      <h4>方式二：公众号后台私信（适用于碎片化文字或图片）</h4>
+      <p>直接在公众号「深中涅槃」后台留言或发送图片。</p>
+    </div>
+    <div class="submit-method">
+      <h4>方式三：微信联系</h4>
+      <p>添加微信联系人 <strong>nirvanaweekly</strong>，加入读者群后投稿交流。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="label">共建计划</span>涅槃线上档案库</h2>
+  <p>我们想建立一个长期开放、人人可查阅的网站，不是为了筛选「重要历史」，而是为了尽可能地保存现场，包括它的理智与它的浪漫。</p>
+  <div class="cards">
+    <div class="card"><div class="icon">📷</div><h3>照片与视频</h3><p>活动、社团、校园场景，任何让你心动的瞬间</p></div>
+    <div class="card"><div class="icon">📄</div><h3>文字记录</h3><p>文章、评论、倡议、信件、手稿、日记片段</p></div>
+    <div class="card"><div class="icon">🎨</div><h3>实物影像</h3><p>周边、海报、传单、纪念品、徽章、衣服</p></div>
+    <div class="card"><div class="icon">💬</div><h3>私人记忆</h3><p>口述、回忆片段、思考、告白、祝福与遗憾</p></div>
+  </div>
+  <p style="margin-top:1.5rem;"><a href="https://mp.weixin.qq.com/s/g38BxLC1TwJTM5zQNSXTow" target="_blank">→ 阅读档案库征集计划全文</a></p>
+</section>
+
+<section>
+  <h2>联系我们</h2>
+  <div class="contact-grid">
+    <div class="contact-item"><span class="icon">💬</span><div class="label">微信公众号</div><div class="value">深中涅槃（微信号：nirvanaweekly2009）</div></div>
+    <div class="contact-item"><span class="icon">👤</span><div class="label">微信联系人（加入读者群）</div><div class="value">nirvanaweekly</div></div>
+    <div class="contact-item"><span class="icon">📧</span><div class="label">投稿邮箱</div><div class="value">nirvanaweekly2009&#64;gmail&#46;com</div></div>
+    <div class="contact-item"><span class="icon">📚</span><div class="label">资料库技术组</div><div class="value">iris20071203&#64;outlook&#46;com（@赵芊一）</div></div>
+    <div class="contact-item"><span class="icon">🎨</span><div class="label">图片影像美编组</div><div class="value">trieudungtranh&#64;gmail&#46;com（@KK）</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>📎 参考与延伸阅读</h2>
+  <div class="refs">
+    <div class="ref-item"><span class="ref-icon">📰</span><div class="ref-body"><a href="https://mp.weixin.qq.com/s/tJDFwWaOhmQI_pAHK4e3Mg" target="_blank">《涅槃周刊》纪念刊｜邀你执笔，共续"涅槃"</a><div class="ref-meta">深中涅槃公众号 · 2026-01-19</div></div></div>
+    <div class="ref-item"><span class="ref-icon">📰</span><div class="ref-body"><a href="https://mp.weixin.qq.com/s/g38BxLC1TwJTM5zQNSXTow" target="_blank">深中记忆拼图｜涅槃线上档案库征集计划</a><div class="ref-meta">深中涅槃公众号 · 2026-02-11</div></div></div>
+    <div class="ref-item"><span class="ref-icon">📰</span><div class="ref-body"><a href="https://mp.weixin.qq.com/s/uIlOlYTXXGSvHJqzvRGXbQ" target="_blank">笔锋切磋，高手过招｜涅槃线上共创会 Vol.2</a><div class="ref-meta">深中涅槃公众号 · 2026-02-13</div></div></div>
+    <div class="ref-item"><span class="ref-icon">📖</span><div class="ref-body"><a href="https://zh.wikipedia.org/wiki/%E6%B6%85%E6%A7%83%E5%91%A8%E5%88%8A" target="_blank">涅槃周刊 — 维基百科</a><div class="ref-meta">Wikipedia</div></div></div>
+    <div class="ref-item"><span class="ref-icon">📖</span><div class="ref-body"><a href="https://szms.miraheze.org/wiki/%E3%80%8A%E6%B6%85%E6%A7%83%E5%91%A8%E5%88%8A%E3%80%8B" target="_blank">《涅槃周刊》 — 深圳中学高中部维基</a><div class="ref-meta">深中维基 · 含各期备份下载</div></div></div>
+    <div class="ref-item"><span class="ref-icon">📰</span><div class="ref-body"><a href="https://www.douban.com/group/nirvanaweekly/" target="_blank">涅槃周刊豆瓣小组</a><div class="ref-meta">豆瓣 · 创建于 2010-02-23</div></div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="motto">越万里之溟濛兮，见凤之流光。</div>
+  <div>《涅槃周刊·纪念刊》筹备组 · 深圳中学 · 2009—2026</div>
+  <div style="margin-top:.6rem;"><a href="about.html">关于涅槃</a> · <a href="timeline.html">完整时间线</a> · <a href="downloads.html">往期下载</a></div>
+</footer>
+
+<script>
+(function(){
+  // Scroll reveal with IntersectionObserver
+  var sections = document.querySelectorAll('section, .submit-section, .notice, .notice-box, .source-card, .batch-card');
+  var idx = 0;
+  sections.forEach(function(el){
+    if(!el.classList.contains('reveal')){
+      el.classList.add('reveal');
+      // Alternate directions for sections
+      if(el.tagName === 'SECTION'){
+        if(idx % 3 === 1) el.classList.add('from-left');
+        else if(idx % 3 === 2) el.classList.add('from-right');
+        idx++;
+      } else {
+        el.classList.add('scale-up');
+      }
+    }
+  });
+
+  // Add stagger-child to grid children
+  document.querySelectorAll('.cards, .stats, .contact-grid, .people, .refs, .online-list, .media-list').forEach(function(grid){
+    var parent = grid.closest('section');
+    if(parent && !parent.classList.contains('reveal')){
+      parent.classList.add('reveal');
+    }
+    Array.from(grid.children).forEach(function(child, i){
+      child.classList.add('stagger-child');
+      child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  // Timeline items
+  document.querySelectorAll('.tl-item, .year-marker').forEach(function(el){
+    if(!el.classList.contains('reveal')){
+      el.classList.add('reveal');
+    }
+  });
+
+  // Batch cards
+  document.querySelectorAll('.batch-card').forEach(function(el){
+    if(!el.classList.contains('reveal')){
+      el.classList.add('reveal');
+      el.classList.add('scale-up');
+    }
+  });
+
+  // Observer
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(function(el){
+    observer.observe(el);
+  });
+
+  // Number counter animation
+  document.querySelectorAll('.stat .num').forEach(function(el){
+    var text = el.textContent.trim();
+    var match = text.match(/^([\d,]+)(\+?)$/);
+    if(!match) return;
+    var target = parseInt(match[1].replace(/,/g,''));
+    var suffix = match[2] || '';
+    var counted = false;
+    var numObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting && !counted){
+          counted = true;
+          var start = 0;
+          var duration = 1200;
+          var startTime = null;
+          function step(ts){
+            if(!startTime) startTime = ts;
+            var progress = Math.min((ts - startTime) / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3);
+            var current = Math.floor(eased * target);
+            el.textContent = current.toLocaleString() + suffix;
+            if(progress < 1) requestAnimationFrame(step);
+            else el.textContent = target.toLocaleString() + suffix;
+          }
+          requestAnimationFrame(step);
+          numObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    numObs.observe(el);
+  });
+})();
+</script>
+
+
+
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">↑</button>
+<!-- Mouse-follow glow effect -->
+<script>
+(function(){
+  function isDark(){ return !window.matchMedia('(prefers-color-scheme: light)').matches; }
+  function glowColor(isNav){
+    if(isNav) return isDark() ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.06)';
+    return isDark() ? 'rgba(232,93,4,0.15)' : 'rgba(212,82,0,0.12)';
+  }
+  function borderColor(){ return isDark() ? 'rgba(232,93,4,0.35)' : 'rgba(212,82,0,0.3)'; }
+  var sels = ['.card','.stat','.person','.contact-item','.media-item','.source-card','.dl-batch','.submit-section','.blockquote','.notice','.notice-box','.tl-item','.year-marker','.ref-item','.trace-item','.batch-card','.online-item'];
+  function applyGlow(el){
+    el.style.position = el.style.position || 'relative';
+    el.style.overflow = 'hidden';
+    var g = document.createElement('div');
+    g.className = '_mg';
+    g.style.cssText = 'position:absolute;top:0;left:0;width:200px;height:200px;border-radius:50%;pointer-events:none;z-index:2;opacity:0;transition:opacity .3s ease;transform:translate(-50%,-50%);';
+    el.appendChild(g);
+    el.addEventListener('mousemove', function(e){
+      var r = el.getBoundingClientRect();
+      g.style.left = (e.clientX-r.left)+'px'; g.style.top = (e.clientY-r.top)+'px';
+      g.style.background = 'radial-gradient(circle,'+glowColor(false)+' 0%,transparent 70%)';
+      g.style.opacity = '1'; el.style.borderColor = borderColor();
+    });
+    el.addEventListener('mouseleave', function(){ g.style.opacity = '0'; el.style.borderColor = ''; });
+  }
+  var nav = document.querySelector('nav');
+  if(nav){
+    nav.style.overflow = 'hidden';
+    var ng = document.createElement('div'); ng.className = '_ng';
+    ng.style.cssText = 'position:absolute;top:0;left:0;width:260px;height:260px;border-radius:50%;pointer-events:none;z-index:2;opacity:0;transition:opacity .35s ease;transform:translate(-50%,-50%);';
+    nav.appendChild(ng);
+    nav.addEventListener('mousemove', function(e){
+      var r = nav.getBoundingClientRect();
+      ng.style.left = (e.clientX-r.left)+'px'; ng.style.top = (e.clientY-r.top)+'px';
+      ng.style.background = 'radial-gradient(circle,'+(isDark()?'rgba(255,255,255,0.12)':'rgba(0,0,0,0.06)')+' 0%,transparent 70%)';
+      ng.style.opacity = '1';
+    });
+    nav.addEventListener('mouseleave', function(){ ng.style.opacity = '0'; });
+  }
+  sels.forEach(function(s){ document.querySelectorAll(s).forEach(function(el){ applyGlow(el); }); });
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function(){
+    document.querySelectorAll('._mg, ._ng').forEach(function(g){ g.style.opacity = '0'; });
+  });
+})();
+</script>
+<script>
+// Back to top
+(function(){ var b=document.querySelector('.back-to-top'); if(!b)return; window.addEventListener('scroll',function(){ if(window.scrollY>600)b.classList.add('visible'); else b.classList.remove('visible'); }); })();
+// Hamburger
+(function(){ var h=document.querySelector('.hamburger'),l=document.querySelector('nav .links'); if(!h||!l)return; h.addEventListener('click',function(){l.classList.toggle('open');}); l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');});}); })();
+</script>
+
+<!-- Liquid Glass Effect (inspired by github.com/shuding/liquid-glass) -->
+<script>
+(function(){
+  'use strict';
+  /* --- math helpers (from shuding/liquid-glass) --- */
+  function sS(a,b,t){t=Math.max(0,Math.min(1,(t-a)/(b-a)));return t*t*(3-2*t);}
+  function ln(x,y){return Math.sqrt(x*x+y*y);}
+  function rr(x,y,w,h,r){var qx=Math.abs(x)-w+r,qy=Math.abs(y)-h+r;return Math.min(Math.max(qx,qy),0)+ln(Math.max(qx,0),Math.max(qy,0))-r;}
+
+  /* Generate displacement map canvas → data-url */
+  function gM(mw,mh){
+    var c=document.createElement('canvas');c.width=mw;c.height=mh;
+    var ctx=c.getContext('2d'),d=new Uint8ClampedArray(mw*mh*4),ms=0,rv=[];
+    for(var i=0;i<d.length;i+=4){
+      var px=(i/4)%mw,py=Math.floor(i/4/mw);
+      var ux=px/mw-.5,uy=py/mh-.5;
+      var dist=rr(ux,uy,.38,.28,.45);
+      var disp=sS(.55,0,dist-.08);
+      var sc=sS(0,1,disp);
+      var dx=(ux*sc+.5)*mw-px,dy=(uy*sc+.5)*mh-py;
+      ms=Math.max(ms,Math.abs(dx),Math.abs(dy));rv.push(dx,dy);
+    }
+    ms=ms*.5||1;var idx=0;
+    for(var i=0;i<d.length;i+=4){d[i]=(rv[idx++]/ms+.5)*255;d[i+1]=(rv[idx++]/ms+.5)*255;d[i+2]=0;d[i+3]=255;}
+    ctx.putImageData(new ImageData(d,mw,mh),0,0);
+    return{u:c.toDataURL(),s:ms};
+  }
+
+  var NS='http://www.w3.org/2000/svg',XL='http://www.w3.org/1999/xlink';
+  var svg=document.createElementNS(NS,'svg');
+  svg.setAttribute('width','0');svg.setAttribute('height','0');
+  svg.style.cssText='position:fixed;top:0;left:0;pointer-events:none;z-index:-1;';
+  var df=document.createElementNS(NS,'defs');svg.appendChild(df);
+  document.body.appendChild(svg);
+
+  var n=0;
+  function ap(el,isNav){
+    var rc=el.getBoundingClientRect();
+    var w=Math.max(Math.round(rc.width),4),h=Math.max(Math.round(rc.height),4);
+    /* lower-res map for perf */
+    var sc=isNav?.15:.35;
+    var mw=Math.max(Math.round(w*sc),2),mh=Math.max(Math.round(h*sc),2);
+    var id='_lg'+(n++),m=gM(mw,mh);
+
+    var f=document.createElementNS(NS,'filter');
+    f.setAttribute('id',id);
+    f.setAttribute('filterUnits','userSpaceOnUse');
+    f.setAttribute('color-interpolation-filters','sRGB');
+    f.setAttribute('x','0');f.setAttribute('y','0');
+    f.setAttribute('width',w+'');f.setAttribute('height',h+'');
+
+    var fi=document.createElementNS(NS,'feImage');
+    fi.setAttribute('width',w+'');fi.setAttribute('height',h+'');
+    fi.setAttributeNS(XL,'href',m.u);fi.setAttribute('result','dm');
+
+    var fd=document.createElementNS(NS,'feDisplacementMap');
+    fd.setAttribute('in','SourceGraphic');fd.setAttribute('in2','dm');
+    fd.setAttribute('xChannelSelector','R');fd.setAttribute('yChannelSelector','G');
+    fd.setAttribute('scale',Math.round(m.s/sc)+'');
+
+    f.appendChild(fi);f.appendChild(fd);df.appendChild(f);
+
+    /* compose backdrop-filter: SVG displacement + original blur stack */
+    var bf=isNav
+      ? 'url(#'+id+') blur(40px) saturate(200%) contrast(1.06) brightness(1.03)'
+      : 'url(#'+id+') blur(0.5px) contrast(1.18) brightness(1.06) saturate(1.12)';
+    el.style.backdropFilter=bf;
+    el.style.webkitBackdropFilter=bf;
+    el.classList.add('lg-on');
+  }
+
+  /* run after layout is ready */
+  function init(){
+    var nv=document.querySelector('nav');
+    if(nv) ap(nv,true);
+    var sels=['.hero .btns a','.source-card .btn','.source-card .btn-outline','.batch-card .btn','.year-nav a'];
+    sels.forEach(function(s){
+      document.querySelectorAll(s).forEach(function(el){ap(el,false);});
+    });
+  }
+
+  if(document.readyState==='complete') init();
+  else window.addEventListener('load',init);
+})();
+</script>
+
+</body>
+</html>
